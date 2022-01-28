@@ -5,7 +5,10 @@ const screen = require('electron').screen
 //require('electron-reload')(__dirname);
 // let Ant = require('ant-plus');
 
+// check per bloccare l'uso del sim
 async function isOnline(){
+    // todo rimuovere true e sistemare server, per uso interno va meglio così (almeno non deve avere internet)
+    return true;
     try {
         const resp = await fetch('https://www.policumbent.it/whpsc_sim_backend/online.php');
         const data = await resp.json();
@@ -102,16 +105,16 @@ const mainMenuTemplate = [
     }
 ];
 
-// if(process.env.NODE_ENV !== 'production'){
-//     mainMenuTemplate.push({
-//         label: 'Developer Tools',
-//         submenu: [{
-//             label: 'Toggle DevTools',
-//             accelerator: process.platform === 'darwin' ? 'command+I' : 'ctrl+I',
-//             click(item, focusedWindow) {
-//                 focusedWindow.webContents.toggleDevTools();
-//             }
-//         }
-//         ]
-//     });
-// }
+if(process.env.NODE_ENV !== 'production'){
+    mainMenuTemplate.push({
+        label: 'Developer Tools',
+        submenu: [{
+            label: 'Toggle DevTools',
+            accelerator: process.platform === 'darwin' ? 'command+I' : 'ctrl+I',
+            click(item, focusedWindow) {
+                focusedWindow.webContents.toggleDevTools();
+            }
+        }
+        ]
+    });
+}
