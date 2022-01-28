@@ -5,8 +5,7 @@
   import type { BikeSettings, UserSettings } from "./models/Settings";
 
   const dispatch = createEventDispatcher();
-  const uploadUrl =
-          "https://www.policumbent.it/whpsc_sim_backend/upload_result.php";
+  const uploadUrl = 'SERVER_UPLOAD_URL';
   export let speed: number;
   export let power: number;
   export let bikeName: string;

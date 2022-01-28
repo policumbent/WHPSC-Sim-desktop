@@ -1,6 +1,10 @@
 # Policumbent WHPSC Simulator
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/915d285c-6324-4acd-b821-89fbc4f2a678/deploy-status)](https://app.netlify.com/sites/whpsc-sim/deploys)
 
-Website of WHPSC Simulator [here](https://www.policumbent.it/whpsc-sim/).
+Website of WHPSC Simulator [here](https://whpsc-sim.policumbent.it).
 
 ## Technical explanation
 
@@ -34,14 +38,14 @@ Taurus | 1.4843*0.04 at 0.1 m/s; 1.0691*0.04 at 40 m/s | 0.0029 at 0.1 m/s;  0.0
 
 ### Windows/MacOs/Chrome OS/Android
 
-1. Go to [policumbent.it/whpsc-sim](https://www.policumbent.it/whpsc-sim/)
+1. Go to [whpsc-sim.policumbent.it](https://whpsc-sim.policumbent.it)
 2. Connect your bluetooth powermeter. (This functionality is available only in Google Chrome 83+)
 3. Start a new run
 
 ### Linux
 
 1. How you can see [here](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md), Linux version of bluettoth API are partially implemented and not supported. So you need to enable `chrome://flags/#enable-experimental-web-platform-features`.
-1. Go to [policumbent.it/whpsc-sim](https://www.policumbent.it/whpsc-sim/)
+1. Go to [whpsc-sim.policumbent.it](https://whpsc-sim.policumbent.it)
 1. Connect your bluetooth powermeter. (This functionality is available only in Google Chrome 83+ and on linux may not work)
 1. Start a new run
 
@@ -55,3 +59,25 @@ Taurus | 1.4843*0.04 at 0.1 m/s; 1.0691*0.04 at 40 m/s | 0.0029 at 0.1 m/s;  0.0
 ## License
 
 [AGPL](https://github.com/policumbent/WHPSC-Sim/blob/master/LICENSE)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/stelosca96"><img src="https://avatars.githubusercontent.com/u/44433696?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefano Loscalzo</b></sub></a><br /><a href="https://github.com/policumbent/WHPSC-Sim/commits?author=stelosca96" title="Code">💻</a> <a href="#ideas-stelosca96" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/FelAcke"><img src="https://avatars.githubusercontent.com/u/57219703?v=4?s=100" width="100px;" alt=""/><br /><sub><b>FelAcke</b></sub></a><br /><a href="https://github.com/policumbent/WHPSC-Sim/commits?author=FelAcke" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/gabelluardo"><img src="https://avatars.githubusercontent.com/u/42920247?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriele Belluardo</b></sub></a><br /><a href="https://github.com/policumbent/WHPSC-Sim/commits?author=gabelluardo" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

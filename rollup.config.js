@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import replace from '@rollup/plugin-replace';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -35,7 +36,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'app/public/build/bundle.js'
+		file: 'app/public/build/bundle_3.js'
 	},
 	plugins: [
 		svelte({
@@ -44,7 +45,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('app/public/build/bundle.css');
+				css.write('bundle_3.css');
 			},
 			preprocess: sveltePreprocess(),
 		}),
@@ -57,6 +58,11 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte']
+		}),
+		replace({
+			PRIVATE_MODE: true,
+			SERVER_RESULTS_URL: 'https://whpsc-sim-server.policumbent.it/results.php',
+			SERVER_UPLOAD_URL: 'https://whpsc-sim-server.policumbent.it/upload_result.php'
 		}),
 		commonjs(),
 		typescript({ sourceMap: !production }),
